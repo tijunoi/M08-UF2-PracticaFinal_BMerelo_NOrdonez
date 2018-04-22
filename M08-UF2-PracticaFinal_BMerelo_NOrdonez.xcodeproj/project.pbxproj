@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		20B7502E2088D1ED00A417FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7502D2088D1ED00A417FE /* AppDelegate.swift */; };
-		20B750302088D1ED00A417FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7502F2088D1ED00A417FE /* ViewController.swift */; };
+		20B750302088D1ED00A417FE /* ShameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7502F2088D1ED00A417FE /* ShameViewController.swift */; };
 		20B750332088D1ED00A417FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B750312088D1ED00A417FE /* Main.storyboard */; };
 		20B750352088D1EE00A417FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B750342088D1EE00A417FE /* Assets.xcassets */; };
 		20B750382088D1EE00A417FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B750362088D1EE00A417FE /* LaunchScreen.storyboard */; };
+		20BFB66A208D0AE100DD21F0 /* PollitosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BFB669208D0AE100DD21F0 /* PollitosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20B7502A2088D1ED00A417FE /* M08-UF2-PracticaFinal_BMerelo_NOrdonez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M08-UF2-PracticaFinal_BMerelo_NOrdonez.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B7502D2088D1ED00A417FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20B7502F2088D1ED00A417FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20B7502F2088D1ED00A417FE /* ShameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShameViewController.swift; sourceTree = "<group>"; };
 		20B750322088D1ED00A417FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20B750342088D1EE00A417FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20B750372088D1EE00A417FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20B750392088D1EE00A417FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BFB669208D0AE100DD21F0 /* PollitosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollitosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				20B7502D2088D1ED00A417FE /* AppDelegate.swift */,
-				20B7502F2088D1ED00A417FE /* ViewController.swift */,
+				20B7502F2088D1ED00A417FE /* ShameViewController.swift */,
 				20B750312088D1ED00A417FE /* Main.storyboard */,
 				20B750342088D1EE00A417FE /* Assets.xcassets */,
 				20B750362088D1EE00A417FE /* LaunchScreen.storyboard */,
 				20B750392088D1EE00A417FE /* Info.plist */,
+				20BFB669208D0AE100DD21F0 /* PollitosViewController.swift */,
 			);
 			path = "M08-UF2-PracticaFinal_BMerelo_NOrdonez";
 			sourceTree = "<group>";
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20B750302088D1ED00A417FE /* ViewController.swift in Sources */,
+				20B750302088D1ED00A417FE /* ShameViewController.swift in Sources */,
+				20BFB66A208D0AE100DD21F0 /* PollitosViewController.swift in Sources */,
 				20B7502E2088D1ED00A417FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
