@@ -18,28 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito2" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-Kt-cwk">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito2" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-Kt-cwk">
                                 <rect key="frame" x="209" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="2Bq-Na-h25"/>
                                     <constraint firstAttribute="height" constant="150" id="dH2-Aq-3TY"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito3" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-3t-Tn5">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito3" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-3t-Tn5">
                                 <rect key="frame" x="16" y="258.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="HbN-kf-ChT"/>
                                     <constraint firstAttribute="width" constant="150" id="ZyT-Js-nWF"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito1" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-sF-a3D">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito1" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-sF-a3D">
                                 <rect key="frame" x="16" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="c05-cd-nVZ"/>
                                     <constraint firstAttribute="height" constant="150" id="g1g-e2-hB0"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito4" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-ye-lmn">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito4" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-ye-lmn">
                                 <rect key="frame" x="209" y="258.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ELe-Bp-Crr"/>
