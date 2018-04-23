@@ -35,7 +35,6 @@ class PollitosViewController: UIViewController {
     func rotatePollito(_ sender: UIImageView){
         let animator = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
             sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-            sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         }
         animator.startAnimation()
     }
