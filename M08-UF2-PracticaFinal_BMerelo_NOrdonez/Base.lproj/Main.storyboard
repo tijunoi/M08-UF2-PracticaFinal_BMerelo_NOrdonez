@@ -18,28 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-Kt-cwk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito2" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-Kt-cwk">
                                 <rect key="frame" x="209" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="2Bq-Na-h25"/>
                                     <constraint firstAttribute="height" constant="150" id="dH2-Aq-3TY"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-3t-Tn5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito3" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-3t-Tn5">
                                 <rect key="frame" x="16" y="258.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="HbN-kf-ChT"/>
                                     <constraint firstAttribute="width" constant="150" id="ZyT-Js-nWF"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-sF-a3D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito1" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-sF-a3D">
                                 <rect key="frame" x="16" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="c05-cd-nVZ"/>
                                     <constraint firstAttribute="height" constant="150" id="g1g-e2-hB0"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-ye-lmn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pollito4" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-ye-lmn">
                                 <rect key="frame" x="209" y="258.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ELe-Bp-Crr"/>
@@ -62,6 +62,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pollitos" id="JTb-rC-4PR"/>
                     <navigationItem key="navigationItem" id="LoG-OH-wGi"/>
+                    <connections>
+                        <outlet property="pollito1ImageView" destination="wgK-sF-a3D" id="BFr-vj-jiD"/>
+                        <outlet property="pollito2ImageView" destination="VHf-Kt-cwk" id="YZl-VE-VYh"/>
+                        <outlet property="pollito3ImageView" destination="N6d-3t-Tn5" id="qaf-at-6oH"/>
+                        <outlet property="pollito4ImageView" destination="jfk-ye-lmn" id="GfF-7W-AIM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udn-Sd-VeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,4 +124,10 @@
             <point key="canvasLocation" x="-1" y="946"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pollito1" width="94" height="109"/>
+        <image name="Pollito2" width="110" height="108"/>
+        <image name="Pollito3" width="110" height="108"/>
+        <image name="Pollito4" width="105" height="114"/>
+    </resources>
 </document>

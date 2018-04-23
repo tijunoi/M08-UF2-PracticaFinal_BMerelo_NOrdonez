@@ -10,6 +10,11 @@ import UIKit
 
 class PollitosViewController: UIViewController {
 
+    @IBOutlet weak var pollito1ImageView: UIImageView!
+    @IBOutlet weak var pollito2ImageView: UIImageView!
+    @IBOutlet weak var pollito3ImageView: UIImageView!
+    @IBOutlet weak var pollito4ImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
