@@ -7,35 +7,64 @@
 //
 
 import UIKit
+import AudioToolbox
+import MediaPlayer
 
 class ShameViewController: UIViewController {
-    
-    let scaleFactor:CGFloat = 0.8
 
-    @IBOutlet weak var muteButton: UIButton!
-    var bellImageView: UIImageView?
+    var bellSoundId: SystemSoundID = 0
+    var shameSoundId: SystemSoundID = 0
+    var backgroundAudioPlayer: AVAudioPlayer?
+
+    @IBOutlet weak var backgroundMusicSwitch: UISwitch!
     
+    var bellImageView: UIImageView? {
+        didSet {
+            let tapBellShameRecognizer = UITapGestureRecognizer(target: self, action: #selector(playShameSound(_:)))
+            bellImageView?.addGestureRecognizer(tapBellShameRecognizer)
+        }
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let image = UIImage(named: "Bell"){
-            
-//            let bellWidth = view.frame.size.width * scaleFactor;
-//            let bellHeight = view.frame.size.height * scaleFactor;
-//
+
+        //MARK: registrar sonido de la campana y el shame
+        if let soundURL = Bundle.main.url(forResource: "bellring", withExtension: "mp3") {
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &bellSoundId)
+        }
+
+        if let soundURL = Bundle.main.url(forResource: "shame", withExtension: "mp3") {
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &shameSoundId)
+        }
+
+        //MARK: background music
+        if let backgroundsoundURL = Bundle.main.url(forResource: "bgmusic", withExtension: "mp3") {
+            do{
+                try backgroundAudioPlayer = AVAudioPlayer(contentsOf: backgroundsoundURL)
+                backgroundAudioPlayer?.numberOfLoops = Int(-1)
+                backgroundAudioPlayer?.prepareToPlay()
+                backgroundAudioPlayer?.play()
+            } catch {
+                print("No se ha podido inicializar el audio background")
+            }
+        }
+
+        //MARK: setear animacion de la imagen
+        if let image = UIImage(named: "Bell") {
+
+
             bellImageView = UIImageView(image: image)
-            //bellImageView!.frame = CGRect(x: 0, y: 0, width: bellWidth, height: bellHeight)
             bellImageView!.contentMode = UIViewContentMode.scaleToFill
-           
+            bellImageView!.isUserInteractionEnabled = true
+
             bellImageView!.translatesAutoresizingMaskIntoConstraints = false
-            
-            
             view.addSubview(bellImageView!)
             bellImageView!.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             bellImageView!.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         }
-        
-        
-        
+
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -43,31 +72,32 @@ class ShameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let animator = UIViewPropertyAnimator(duration: 1, curve: .easeIn){
+            AudioServicesPlaySystemSound(bellSoundId)
+            let animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeIn) {
                 var transform = CGAffineTransform(rotationAngle: 30 * CGFloat.pi / 180)
                 transform = transform.scaledBy(x: 1.2, y: 1.2)
                 self.bellImageView?.transform = transform
             }
-            
+
             animator.addCompletion { _ in
-                let secondAnimator = UIViewPropertyAnimator(duration: 1, curve: .easeIn){
+                let secondAnimator = UIViewPropertyAnimator(duration: 0.3, curve: .easeIn) {
                     var transform = CGAffineTransform(rotationAngle: -30 * CGFloat.pi / 180)
                     transform = transform.scaledBy(x: 1.2, y: 1.2)
                     self.bellImageView?.transform = transform
                 }
 
                 secondAnimator.addCompletion { _ in
-                    let thirdAnimator =  UIViewPropertyAnimator(duration: 1, curve: .easeIn){
+                    let thirdAnimator = UIViewPropertyAnimator(duration: 0.3, curve: .easeIn) {
                         var transform = CGAffineTransform(rotationAngle: 30 * CGFloat.pi / 180)
                         transform = transform.scaledBy(x: 1.2, y: 1.2)
                         self.bellImageView?.transform = transform
                     }
 
                     thirdAnimator.addCompletion { _ in
-                        let fourthAnimator =  UIViewPropertyAnimator(duration: 1, curve: .easeIn){
+                        let fourthAnimator = UIViewPropertyAnimator(duration: 1, curve: .easeIn) {
                             self.bellImageView?.transform = CGAffineTransform.identity
                         }
 
@@ -80,14 +110,25 @@ class ShameViewController: UIViewController {
                 }
                 secondAnimator.startAnimation()
             }
-            
+
             animator.startAnimation()
         }
     }
-    
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        
+
+    @objc func playShameSound(_ sender: UITapGestureRecognizer) {
+        AudioServicesPlaySystemSound(shameSoundId)
     }
+    
+    @IBAction func musicSwitchChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            //activate audio
+            backgroundAudioPlayer?.play()
+        } else {
+            //cancel audio
+            backgroundAudioPlayer?.pause()
+        }
+    }
+    
 
 
 }

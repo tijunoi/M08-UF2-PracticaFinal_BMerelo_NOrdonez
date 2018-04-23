@@ -17,14 +17,29 @@ class PollitosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        rotatePollito(pollito1ImageView)
+        rotatePollito(pollito2ImageView)
+        rotatePollito(pollito3ImageView)
+        rotatePollito(pollito4ImageView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func rotatePollito(_ sender: UIImageView){
+        let animator = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+            sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+        animator.startAnimation()
+    }
+    
     
 
     /*

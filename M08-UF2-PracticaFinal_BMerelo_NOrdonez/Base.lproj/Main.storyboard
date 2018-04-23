@@ -81,24 +81,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-IQ-Oxb">
-                                <rect key="frame" x="318" y="43" width="35" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Mute"/>
-                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-ZJ-xwX">
+                                <rect key="frame" x="312.5" y="561.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="musicSwitchChanged:" destination="IMB-YC-Pcx" eventType="valueChanged" id="yy7-b3-bqB"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activar sonido de fondo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yca-Yt-o3Q">
+                                <rect key="frame" x="96.5" y="567" width="182" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="I2r-IQ-Oxb" firstAttribute="top" secondItem="Xc6-2V-0vI" secondAttribute="top" constant="23" id="W9O-hF-k3E"/>
-                            <constraint firstItem="I2r-IQ-Oxb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U6K-36-CsM" secondAttribute="leading" constant="20" symbolic="YES" id="iCd-S0-q4Q"/>
-                            <constraint firstItem="Xc6-2V-0vI" firstAttribute="trailing" secondItem="I2r-IQ-Oxb" secondAttribute="trailing" constant="22" id="t6R-EL-YDJ"/>
+                            <constraint firstItem="Yca-Yt-o3Q" firstAttribute="centerX" secondItem="Xc6-2V-0vI" secondAttribute="centerX" id="A0t-ca-WrN"/>
+                            <constraint firstItem="Xc6-2V-0vI" firstAttribute="bottom" secondItem="Ecb-ZJ-xwX" secondAttribute="bottom" constant="25.5" id="M19-OH-f4e"/>
+                            <constraint firstItem="Xc6-2V-0vI" firstAttribute="bottom" secondItem="Yca-Yt-o3Q" secondAttribute="bottom" constant="30.5" id="TR1-mc-uFJ"/>
+                            <constraint firstItem="Xc6-2V-0vI" firstAttribute="trailing" secondItem="Ecb-ZJ-xwX" secondAttribute="trailing" constant="13.5" id="k24-m4-1f1"/>
+                            <constraint firstItem="Ecb-ZJ-xwX" firstAttribute="centerY" secondItem="Yca-Yt-o3Q" secondAttribute="centerY" id="kDR-Hm-deZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xc6-2V-0vI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shame" id="1K1-xc-ihh"/>
                     <navigationItem key="navigationItem" id="4Y2-i4-smd"/>
                     <connections>
-                        <outlet property="muteButton" destination="I2r-IQ-Oxb" id="zuj-WK-RKP"/>
+                        <outlet property="backgroundMusicSwitch" destination="Ecb-ZJ-xwX" id="Ghr-8Y-h04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Kz-RM-fH9" userLabel="First Responder" sceneMemberID="firstResponder"/>

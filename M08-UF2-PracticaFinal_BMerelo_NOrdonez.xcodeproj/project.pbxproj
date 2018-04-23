@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		208943AC208E4FF10042AA3C /* bellring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 208943AB208E4FF10042AA3C /* bellring.mp3 */; };
+		208943AE208E50880042AA3C /* shame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 208943AD208E50880042AA3C /* shame.mp3 */; };
+		208943B1208E55100042AA3C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208943B0208E55100042AA3C /* AudioToolbox.framework */; };
+		208943B3208E551F0042AA3C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208943B2208E551F0042AA3C /* MediaPlayer.framework */; };
+		208943B5208E61970042AA3C /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 208943B4208E61970042AA3C /* bgmusic.mp3 */; };
 		20B7502E2088D1ED00A417FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7502D2088D1ED00A417FE /* AppDelegate.swift */; };
 		20B750302088D1ED00A417FE /* ShameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7502F2088D1ED00A417FE /* ShameViewController.swift */; };
 		20B750332088D1ED00A417FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B750312088D1ED00A417FE /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		208943AB208E4FF10042AA3C /* bellring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bellring.mp3; sourceTree = "<group>"; };
+		208943AD208E50880042AA3C /* shame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shame.mp3; sourceTree = "<group>"; };
+		208943B0208E55100042AA3C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		208943B2208E551F0042AA3C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		208943B4208E61970042AA3C /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
 		20B7502A2088D1ED00A417FE /* M08-UF2-PracticaFinal_BMerelo_NOrdonez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M08-UF2-PracticaFinal_BMerelo_NOrdonez.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B7502D2088D1ED00A417FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B7502F2088D1ED00A417FE /* ShameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShameViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208943B3208E551F0042AA3C /* MediaPlayer.framework in Frameworks */,
+				208943B1208E55100042AA3C /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208943AF208E55100042AA3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				208943B2208E551F0042AA3C /* MediaPlayer.framework */,
+				208943B0208E55100042AA3C /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20B750212088D1ED00A417FE = {
 			isa = PBXGroup;
 			children = (
 				20B7502C2088D1ED00A417FE /* M08-UF2-PracticaFinal_BMerelo_NOrdonez */,
 				20B7502B2088D1ED00A417FE /* Products */,
+				208943AF208E55100042AA3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +78,9 @@
 		20B7502C2088D1ED00A417FE /* M08-UF2-PracticaFinal_BMerelo_NOrdonez */ = {
 			isa = PBXGroup;
 			children = (
+				208943AB208E4FF10042AA3C /* bellring.mp3 */,
+				208943B4208E61970042AA3C /* bgmusic.mp3 */,
+				208943AD208E50880042AA3C /* shame.mp3 */,
 				20B7502D2088D1ED00A417FE /* AppDelegate.swift */,
 				20B7502F2088D1ED00A417FE /* ShameViewController.swift */,
 				20B750312088D1ED00A417FE /* Main.storyboard */,
@@ -126,8 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B750382088D1EE00A417FE /* LaunchScreen.storyboard in Resources */,
+				208943AC208E4FF10042AA3C /* bellring.mp3 in Resources */,
+				208943AE208E50880042AA3C /* shame.mp3 in Resources */,
 				20B750352088D1EE00A417FE /* Assets.xcassets in Resources */,
 				20B750332088D1ED00A417FE /* Main.storyboard in Resources */,
+				208943B5208E61970042AA3C /* bgmusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
