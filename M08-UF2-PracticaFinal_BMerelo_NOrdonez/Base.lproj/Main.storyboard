@@ -60,7 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rQa-aO-6E3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pollitos" id="JTb-rC-4PR"/>
+                    <tabBarItem key="tabBarItem" title="Pollitos" image="PollitoTab" selectedImage="PollitoTab" id="JTb-rC-4PR"/>
                     <navigationItem key="navigationItem" id="LoG-OH-wGi"/>
                     <connections>
                         <outlet property="pollito1ImageView" destination="wgK-sF-a3D" id="BFr-vj-jiD"/>
@@ -104,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xc6-2V-0vI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shame" id="1K1-xc-ihh"/>
+                    <tabBarItem key="tabBarItem" title="Shame" image="BellITab" selectedImage="BellITab" id="1K1-xc-ihh"/>
                     <navigationItem key="navigationItem" id="4Y2-i4-smd"/>
                     <connections>
                         <outlet property="backgroundMusicSwitch" destination="Ecb-ZJ-xwX" id="Ghr-8Y-h04"/>
@@ -134,9 +134,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BellITab" width="20" height="20"/>
         <image name="Pollito1" width="94" height="109"/>
         <image name="Pollito2" width="110" height="108"/>
         <image name="Pollito3" width="110" height="108"/>
         <image name="Pollito4" width="105" height="114"/>
+        <image name="PollitoTab" width="20" height="20"/>
     </resources>
 </document>
